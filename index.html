@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/output.css">
+    <link rel="shortcut icon" href="/assets/logo-mastergrill (1).png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/334b29d687.js" crossorigin="anonymous"></script>
+    <title>Master Grill</title>
+</head>
+<body class="bg-linear-to-t bg-fixed bg-linear-tr from-yellow-900 to-amber-950 text-texto font-texto  mx-auto overflow-x-hidden">
+
+    <header class="py-4 px-8 flex justify-between items-center w-full sticky top-0 z-100 backdrop-blur-lg max-w-[1600px] mx-auto">
+
+        <div><img src="/assets/logo-mastergrill (1).png" alt="logo" class="w-full max-w-28 md:max-w-40 hover:scale-110 duration-300 cursor-pointer"></div>
+        <button class="btnMenu linkMenu" id="btnMenu"><i class="fa-solid fa-bars"></i></button>
+        <nav class="hidden md:flex">
+            <ul class="flex gap-4">
+                <a href="#home" class="item-lista linkMenu">
+                    <li>Home</li>
+                </a>
+                <a href="#sobre" class="item-lista linkMenu">
+                    <li>Quem somos</li>
+                </a>
+                <a href="#servicos" class="item-lista linkMenu">
+                    <li>Serviços</li>
+                </a>
+                 <a href="#galeria" class="item-lista linkMenu">
+                    <li>Galeria</li>
+                </a>
+                <a href="#contato" class="item-lista linkMenu">
+                    <li>Contato</li>
+                </a>
+            </ul>
+        </nav>
+    </header>
+
+        <!-- Menu Mobile -->
+         
+
+    <nav class="fixed duration-400 w-screen h-screen top-0 right-0 left-0 bottom-0 translate-x-full z-200 bg-black/90 backdrop-blur-md" id="menu-mobile">
+        <button class="absolute top-5 right-5 text-3xl cursor-pointer linkMenu item-lista" id="btn-close">X</button>
+          <ul class="min-h-screen flex justify-center items-center flex-col gap-6">
+                <a href="#" class="item-lista-mobile linkMenu">
+                    <li>Home</li>
+                </a>
+                <a href="#sobre" class="item-lista-mobile linkMenu">
+                    <li>Quem somos</li>
+                </a>
+                <a href="#servicos" class="item-lista-mobile linkMenu">
+                    <li>Serviços</li>
+                </a>
+                <a href="#galeria" class="item-lista-mobile linkMenu">
+                    <li>Galeria</li>
+                </a>
+                <a href="#contato" class="item-lista-mobile linkMenu">
+                    <li>Contato</li>
+                </a>
+            </ul>
+    </nav>
+
+    <main class="mt-4 md:mt-12">
+            <section class="flex max-w-[1600px] mx-auto justify-between xl:py-16 py-4 px-6 section" id="home">
+                
+                <article class="flex flex-col justify-center gap-6 max-w-3xl">
+                    <p class="text-amber-300/60 chamada_texto font-chamada animate-fadeUp delay_200">Celebrar é melhor com churrasco</p>
+                    <h1 class="text-5xl md:text-7xl font-title font-bold animate-fadeUp delay_500">Seu evento merece um <span class="inline-block  text-destaque italic font-destaque animate-brilhar delay_1200 text-shadow-black text-shadow-sm">churrasco</span> inesquecível</h1>
+
+                    <h2 class="text-subtitle text-shadow-sm text-shadow-black/50 text-xl font-subtitle animate-fadeUp delay_700 leading-8">Churrasco artesanal para casamentos, aniversários, confraternizações e eventos corporativos. Do corte à mesa, cuidamos de tudo.</h2>
+
+                    <a href="#" class="btnChurrasco self-start animate-fadeUp delay_900">Solicite seu orçamento</a>
+
+                    <a href="#" class="self-start border cursor-pointer duration-300 hover:text-amber-300/60 border-white hover:border-amber-300/60 p-4 animate-fadeUp delay_1000">Veja nossos serviços</a>
+                </article>
+
+                <article class="hidden lg:block  animate-fadeUp  delay_200">
+                  
+                    <div class="grill-wrap" style="position:relative; display:inline-flex; align-items:center; justify-content:center;">
+ 
+    <!--
+      SVG PRINCIPAL
+      viewBox="0 0 320 340" define o espaço de coordenadas interno.
+      width/height em Tailwind controlam o tamanho renderizado.
+      overflow: visible permite que fumaça e brilho saiam do box.
+    -->
+     <div class="grill-halo"></div>
+    <svg
+      viewBox="0 0 320 340"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      class="w-72 md:w-90 lg:w-[390px] xl:w-[500px]"
+     style="position:relative; z-index:1; overflow:visible;">
+    >
+ 
+      <!-- ══════════════════════════════════════
+           DEFS — gradientes e filtros reutilizáveis
+           Ficam aqui dentro e são referenciados
+           por id em todo o SVG abaixo
+      ══════════════════════════════════════ -->
+      <defs>
+ 
+        <!--
+          GLOW RADIAL — brilho laranja embaixo da churrasqueira
+          cx/cy = centro do gradiente (50% horizontal, 100% = borda inferior)
+          r = raio do gradiente
+        -->
+        <radialGradient id="glowGrad" cx="50%" cy="100%" r="60%">
+          <stop offset="0%"   stop-color="#E8431A" stop-opacity="0.7"/>
+          <stop offset="100%" stop-color="#E8431A" stop-opacity="0"/>
+        </radialGradient>
+ 
+        <!--
+          EMBER RADIAL — brasa incandescente no interior da tigela
+          Vai de laranja brilhante no centro até transparente nas bordas
+        -->
+        <radialGradient id="emberGrad" cx="50%" cy="50%" r="50%">
+          <stop offset="0%"   stop-color="#FFB347" stop-opacity="0.9"/>
+          <stop offset="60%"  stop-color="#E8431A" stop-opacity="0.7"/>
+          <stop offset="100%" stop-color="#7B1A00" stop-opacity="0"/>
+        </radialGradient>
+ 
+        <!--
+          BODY LINEAR — corpo da churrasqueira (tigela)
+          Mais claro em cima, mais escuro embaixo = profundidade
+          x1/y1 = ponto inicial | x2/y2 = ponto final (0→1 = cima→baixo)
+        -->
+        <linearGradient id="bodyGrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%"   stop-color="#3D2010"/>
+          <stop offset="100%" stop-color="#1A0A02"/>
+        </linearGradient>
+ 
+        <!--
+          FLAME A — chama principal (frente)
+          Amarelo no topo → laranja no meio → vermelho na base
+          x1/x2 = mesmos (0.5), y1/y2 diferentes = gradiente vertical
+        -->
+        <linearGradient id="flameA" x1="0.5" y1="0" x2="0.5" y2="1">
+          <stop offset="0%"   stop-color="#FFE066" stop-opacity="0.95"/>
+          <stop offset="50%"  stop-color="#FF7A00" stop-opacity="0.9"/>
+          <stop offset="100%" stop-color="#E8431A" stop-opacity="0.6"/>
+        </linearGradient>
+ 
+        <!--
+          FLAME B — chama secundária (atrás, mais escura e menor)
+          Tom mais alaranjado/avermelhado para criar profundidade
+        -->
+        <linearGradient id="flameB" x1="0.5" y1="0" x2="0.5" y2="1">
+          <stop offset="0%"   stop-color="#FFD03A" stop-opacity="0.85"/>
+          <stop offset="55%"  stop-color="#FF5500" stop-opacity="0.85"/>
+          <stop offset="100%" stop-color="#C93B00" stop-opacity="0.5"/>
+        </linearGradient>
+ 
+        <!--
+          FILTRO BLUR GRANDE — usado no brilho do chão
+          stdDeviation="8" = quanto mais alto, mais espalhado o blur
+        -->
+        <filter id="blurGlow" x="-50%" y="-50%" width="200%" height="200%">
+          <feGaussianBlur stdDeviation="8"/>
+        </filter>
+ 
+        <!--
+          FILTRO BLUR SUAVE — usado na fumaça e nas brasas
+          stdDeviation menor = blur mais leve e natural
+        -->
+        <filter id="softBlur">
+          <feGaussianBlur stdDeviation="2.5"/>
+        </filter>
+ 
+      </defs>
+      <!-- FIM DAS DEFS -->
+ 
+ 
+      <!-- ══════════════════════════════════════
+           FUMAÇA
+           Elipses posicionadas acima da grelha.
+           Cada uma tem delay diferente via classe smoke-1/2/3
+           filter="url(#softBlur)" deixa as bordas suaves
+      ══════════════════════════════════════ -->
+     <!-- FUMAÇA — 5 colunas, moderada mas visível -->
+      <ellipse class="smoke-p smoke-p1" cx="130" cy="108" rx="11" ry="15" fill="#C8A882" filter="url(#softBlur2)"/>
+      <ellipse class="smoke-p smoke-p4" cx="126" cy="86"  rx="14" ry="18" fill="#B89868" filter="url(#softBlur2)" opacity="0.6"/>
+      <ellipse class="smoke-p smoke-p2" cx="148" cy="104" rx="10" ry="14" fill="#C0A070" filter="url(#softBlur2)"/>
+      <ellipse class="smoke-p smoke-p5" cx="144" cy="80"  rx="13" ry="17" fill="#A88858" filter="url(#softBlur2)" opacity="0.55"/>
+      <ellipse class="smoke-p smoke-p3" cx="163" cy="100" rx="9"  ry="13" fill="#B89868" filter="url(#softBlur2)"/>
+      <ellipse class="smoke-p smoke-p1" cx="160" cy="76"  rx="12" ry="16" fill="#A88050" filter="url(#softBlur2)" opacity="0.5"/>
+      <ellipse class="smoke-p smoke-p2" cx="178" cy="106" rx="10" ry="14" fill="#C0A070" filter="url(#softBlur2)"/>
+      <ellipse class="smoke-p smoke-p4" cx="182" cy="82"  rx="13" ry="17" fill="#B09060" filter="url(#softBlur2)" opacity="0.5"/>
+      <ellipse class="smoke-p smoke-p5" cx="196" cy="110" rx="11" ry="15" fill="#C8A882" filter="url(#softBlur2)"/>
+      <ellipse class="smoke-p smoke-p3" cx="200" cy="84"  rx="14" ry="18" fill="#A87848" filter="url(#softBlur2)" opacity="0.45"/>
+ 
+ 
+      <!-- ══════════════════════════════════════
+           BRILHO DO CHÃO (glow)
+           Elipse larga e baixa embaixo da churrasqueira.
+           filter="url(#blurGlow)" espalha o brilho.
+           Classe glow-pulse faz ele pulsar.
+      ══════════════════════════════════════ -->
+      <ellipse
+        class="glow-pulse"
+        cx="160" cy="210"
+        rx="100" ry="26"
+        fill="url(#glowGrad)"
+        filter="url(#blurGlow)"
+      />
+ 
+ 
+      <!-- ══════════════════════════════════════
+           PERNAS
+           Dois retângulos verticais + uma barra horizontal (travessa)
+           rx="5" arredonda as pontas
+      ══════════════════════════════════════ -->
+      <!-- Perna esquerda -->
+      <rect x="94" y="248" width="15" height="180" rx="5" fill="#2A1206"/>
+      <!-- Perna direita -->
+      <rect x="210" y="248" width="15" height="180" rx="5" fill="#2A1206"/>
+      <!-- Travessa central -->
+      <rect x="94" y="380" width="131" height="9" rx="4" fill="#1E0D04"/>
+ 
+ 
+      <!-- ══════════════════════════════════════
+           CORPO DA CHURRASQUEIRA (tigela)
+           path com curva Q (quadrática) cria o arco da tigela.
+           Leitura do path: M = mover para | Q = curva quadrática | Z = fechar
+           "M58 185 Q58 258 160 261 Q262 258 262 185 Z"
+           = começa em (58,185), curva até (160,261), curva até (262,185), fecha
+      ══════════════════════════════════════ -->
+      <path
+        d="M58 185 Q58 258 160 261 Q262 258 262 185 Z"
+        fill="url(#bodyGrad)"
+        stroke="#5C2E0A"
+        stroke-width="2"
+      />
+ 
+ 
+      <!-- ══════════════════════════════════════
+           BRASAS (ember)
+           Elipse no interior da tigela simulando o carvão quente.
+           filter softBlur deixa as bordas difusas como brasa real.
+      ══════════════════════════════════════ -->
+      <ellipse
+        cx="160" cy="238"
+        rx="76" ry="15"
+        fill="url(#emberGrad)"
+        filter="url(#softBlur)"
+        opacity="0.9"
+      />
+ 
+ 
+      <!-- ══════════════════════════════════════
+           CHAMAS DE FUNDO (fl4, fl5)
+           Ficam atrás das chamas principais.
+           Opacity menor e gradiente flameB (mais escuro)
+           para simular profundidade.
+      ══════════════════════════════════════ -->
+ 
+      <!-- Chama fundo esquerda -->
+      <g class="flame fl4" style="transform-origin: 118px 200px;">
+        <path
+          d="M118 200 C112 186 108 172 116 160
+             C119 169 121 176 125 180
+             C123 167 127 152 118 140
+             C131 155 135 170 129 184
+             C133 175 135 166 131 156
+             C140 169 140 184 133 197Z"
+          fill="url(#flameB)"
+          opacity="0.55"
+        />
+      </g>
+ 
+      <!-- Chama fundo direita -->
+      <g class="flame fl5" style="transform-origin: 202px 200px;">
+        <path
+          d="M202 200 C196 186 192 172 200 160
+             C203 169 205 176 209 180
+             C207 167 211 152 202 140
+             C215 155 219 170 213 184
+             C217 175 219 166 215 156
+             C224 169 224 184 217 197Z"
+          fill="url(#flameB)"
+          opacity="0.55"
+        />
+      </g>
+ 
+ 
+      <!-- ══════════════════════════════════════
+           CHAMAS PRINCIPAIS (fl1, fl2, fl3, fl6)
+           Ficam na frente, usam gradiente flameA (mais claro/brilhante).
+           Cada path é desenhado como uma chama orgânica usando
+           curvas C (cúbicas bezier):
+           C cx1 cy1, cx2 cy2, x y = curva com 2 pontos de controle
+      ══════════════════════════════════════ -->
+ 
+      <!-- Chama principal esquerda -->
+      <g class="flame fl1" style="transform-origin: 138px 205px;">
+        <path
+          d="M138 205 C130 187 124 168 133 150
+             C137 163 140 174 146 180
+             C143 163 148 144 138 128
+             C154 147 160 168 152 186
+             C158 173 160 160 155 146
+             C167 163 167 182 158 198Z"
+          fill="url(#flameA)"
+        />
+      </g>
+ 
+      <!-- Chama principal centro -->
+      <g class="flame fl2" style="transform-origin: 160px 203px;">
+        <path
+          d="M160 203 C154 189 150 175 157 158
+             C160 169 162 178 168 183
+             C165 168 169 151 160 138
+             C173 155 177 172 171 188
+             C175 177 176 166 172 154
+             C182 169 182 187 174 200Z"
+          fill="url(#flameA)"
+        />
+      </g>
+ 
+      <!-- Chama principal direita -->
+      <g class="flame fl3" style="transform-origin: 182px 205px;">
+        <path
+          d="M182 205 C176 187 172 168 180 151
+             C184 163 186 174 191 180
+             C188 164 193 146 182 130
+             C198 149 203 170 196 187
+             C200 175 201 163 197 150
+             C207 166 207 185 200 199Z"
+          fill="url(#flameA)"
+        />
+      </g>
+ 
+      <!-- Chama interna (miolo amarelo — dá profundidade ao fogo) -->
+      <g class="flame fl6" style="transform-origin: 160px 205px;">
+        <path
+          d="M148 205 C142 192 140 180 145 168
+             C148 176 150 182 153 185
+             C152 174 155 162 148 152
+             C158 165 161 177 157 191
+             C159 183 161 174 158 164
+             C165 175 165 189 160 201Z"
+          fill="#FFE580"
+          opacity="0.45"
+        />
+      </g>
+ 
+ 
+      <!-- ══════════════════════════════════════
+           BORDA DA GRELHA (aro superior)
+           Elipse que forma a borda da grelha.
+           Aparece acima de tudo (ordem no SVG = z-index)
+      ══════════════════════════════════════ -->
+      <ellipse cx="160" cy="185" rx="102" ry="17" fill="#3D1E08" stroke="#5C2E0A" stroke-width="2"/>
+ 
+ 
+      <!-- ══════════════════════════════════════
+           BARRAS DA GRELHA — HORIZONTAIS
+           Linhas que simulam as barras de metal.
+           Ficam mais curtas conforme sobem (perspectiva).
+           stroke-linecap="round" arredonda as pontas.
+      ══════════════════════════════════════ -->
+      <g stroke="#6B3510" stroke-width="4.5" stroke-linecap="round">
+        <line x1="70"  y1="185" x2="250" y2="185"/> <!-- barra mais baixa (mais larga) -->
+        <line x1="72"  y1="177" x2="248" y2="177"/>
+        <line x1="78"  y1="169" x2="242" y2="169"/>
+        <line x1="90"  y1="162" x2="230" y2="162"/>
+        <line x1="106" y1="156" x2="214" y2="156"/> <!-- barra mais alta (mais curta) -->
+      </g>
+ 
+      <!-- BARRAS DA GRELHA — VERTICAIS (cruzamento)
+           Opacity menor pois ficam "por baixo" visualmente.
+      -->
+      <g stroke="#5A2C0A" stroke-width="3" stroke-linecap="round" opacity="0.55">
+        <line x1="100" y1="156" x2="96"  y2="186"/>
+        <line x1="120" y1="154" x2="116" y2="186"/>
+        <line x1="140" y1="153" x2="137" y2="186"/>
+        <line x1="160" y1="153" x2="160" y2="186"/>
+        <line x1="180" y1="153" x2="183" y2="186"/>
+        <line x1="200" y1="154" x2="204" y2="186"/>
+        <line x1="220" y1="156" x2="224" y2="186"/>
+      </g>
+ 
+ 
+      <!-- ══════════════════════════════════════
+           CORTES DE CARNE
+           Cada peça tem 3 camadas:
+           1. Elipse base (cor mais escura = sombra/profundidade)
+           2. Elipse de cima (cor da carne grelhada)
+           3. Linhas de marca da grelha
+           4. Path fino branco/dourado = capa de gordura
+           Classe sizzle = animação de "fritar"
+      ══════════════════════════════════════ -->
+ 
+      <!-- Carne 1 — Picanha esquerda -->
+      <g class="sizzle">
+        <!-- sombra/base -->
+        <ellipse cx="128" cy="171" rx="36" ry="11" fill="#8B2500"/>
+        <!-- superfície da carne -->
+        <ellipse cx="128" cy="169" rx="34" ry="9"  fill="#A83010"/>
+        <!-- marcas da grelha -->
+        <line x1="108" y1="167" x2="148" y2="169" stroke="#5A1500" stroke-width="3"   stroke-linecap="round" opacity="0.7"/>
+        <line x1="110" y1="173" x2="148" y2="175" stroke="#5A1500" stroke-width="3"   stroke-linecap="round" opacity="0.7"/>
+        <!-- capa de gordura (topo da picanha) -->
+        <path d="M94 168 Q128 161 162 168 Q128 163 94 168Z" fill="#D4A060" opacity="0.65"/>
+      </g>
+ 
+      <!-- Carne 2 — Picanha direita (delay diferente no sizzle) -->
+      <g class="sizzle" style="animation-delay: 1.2s;">
+        <ellipse cx="194" cy="169" rx="32" ry="10" fill="#7B2000"/>
+        <ellipse cx="194" cy="167" rx="30" ry="8"  fill="#962E10"/>
+        <line x1="175" y1="165" x2="212" y2="167" stroke="#5A1500" stroke-width="2.5" stroke-linecap="round" opacity="0.7"/>
+        <line x1="176" y1="171" x2="212" y2="173" stroke="#5A1500" stroke-width="2.5" stroke-linecap="round" opacity="0.7"/>
+        <path d="M164 166 Q194 160 224 166 Q194 162 164 166Z" fill="#C89050" opacity="0.55"/>
+      </g>
+ 
+ 
+      <!-- ══════════════════════════════════════
+           ALÇAS (handles)
+           Retângulos horizontais nas laterais da grelha.
+           rx="5" arredonda os cantos.
+      ══════════════════════════════════════ -->
+      <!-- Alça esquerda -->
+      <rect x="54"  y="180" width="20" height="10" rx="5" fill="#4A2008" stroke="#5C2E0A" stroke-width="1.5"/>
+      <!-- Alça direita -->
+      <rect x="246" y="180" width="20" height="10" rx="5" fill="#4A2008" stroke="#5C2E0A" stroke-width="1.5"/>
+ 
+ 
+      <!-- ══════════════════════════════════════
+           HIGHLIGHT DO ARO
+           Elipse vazia (só stroke) com opacity baixa.
+           Dá a ilusão de reflexo de luz no metal.
+      ══════════════════════════════════════ -->
+      <ellipse
+        cx="160" cy="185"
+        rx="102" ry="17"
+        fill="none"
+        stroke="#7A3D15"
+        stroke-width="1.5"
+        opacity="0.4"
+      />
+ 
+    </svg>
+    <!-- FIM DO SVG -->
+ 
+  </div>
+  <!-- FIM DO WRAPPER -->
+                </article>
+            </section>
+
+            <div class="linhaDecorativa"><span class="text-xl opacity-50 text-amber-300">✦</span></div>
+
+    <section id="sobre" class="section-padrao lg:flex-row  md:gap-12 mx-auto section">
+      
+      <article class="flex-1">
+        <div class="relative border-2 max-w-3xl border-amber-300/40"><img src="/assets/logocompleta.png" class="w-full aspect-square" alt="imagem">
+        <div class="absolute -top-6 right-0 md:-right-8 bg-ember rounded-full p-5  text-center shadow-sm shadow-black font-title"><p class="font-bold text-amber-300 text-2xl tracking-wide text-shadow-xs text-shadow-black">+100</p> <p class="text-md font-medium tracking-wide text-shadow-xs text-shadow-black">eventos</br> realizados</p></div> 
+            </div>
+      </article>
+
+      <article class="flex flex-col flex-1 gap-6  max-w-2xl mx-auto">
+        <p class="text-amber-300/60 chamada_texto font-chamada ">Quem somos</p>
+        <h3 class="subtitle_description">A paixão pelo churrasco está em cada detalhe.</h3>
+        <p class="text-lg leading-8">Há mais de 6 anos transformamos eventos comuns em memórias deliciosas. Tudo começa na escolha dos melhores cortes, passa pelo preparo artesanal e termina com seus convidados pedindo o contato.</p>
+        <p class="text-lg leading-8">Trabalhamos com equipe treinada, equipamentos completos e um cardápio que se adapta ao tamanho e ao estilo do seu evento.</p>
+        <a href="#contato" class="btnChurrasco w-72 text-center">Fale Conosco</a>
+      </article>
+
+    </section>
+    
+    <section id="servicos" class="section-padrao scroll-mt-40 md:scroll-mt-56">
+      <p class="text-amber-300/60 chamada_texto font-chamada">Serviços</p>
+      <h3 class="subtitle_description">O que entregamos</h3>
+       <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+
+        <div class="card_service">
+          <p class="text-4xl">🥩</p>
+          <h4 class="title_services">Churrasco Tradicional</h4>
+          <p class="descricao_servicos">Picanha, fraldinha, costela, linguiça e muito mais. Cortes selecionados e preparados na hora.</p>
+        </div>
+        <div class="card_service">
+          <p class="text-4xl">🎂</p>
+          <h4 class="title_services">Festas e Aniversários</h4>
+          <p class="descricao_servicos">Cardápio personalizado para deixar sua festa com a cara que você sempre quis.</p>
+        </div>
+        <div class="card_service">
+          <p class="text-4xl">🏢</p>
+          <h4 class="title_services">Eventos Corporativos</h4>
+          <p class="descricao_servicos">Confraternizações e eventos empresariais com toda a infraestrutura e pontualidade.</p>
+        </div>
+        <div class="card_service">
+          <p class="text-4xl">🍻</p>
+          <h4 class="title_services">Happy Hour</h4>
+          <p class="descricao_servicos">Petiscos, espetinhos e cortes especiais para descomplicar o fim de semana.</p>
+        </div>
+        <div class="card_service">
+          <p class="text-4xl">💍</p>
+          <h4 class="title_services">Casamentos e formaturas</h4>
+          <p class="descricao_servicos">Um menu especial para o dia mais importante. Atendimento exclusivo e dedicado.</p>
+        </div>
+        <div class="card_service">
+          <p class="text-4xl">🚚</p>
+          <h4 class="title_services">Estrutura completa</h4>
+          <p class="descricao_servicos">Levamos tudo: parrilla, equipamentos, equipe, louça e descartável. Você só aproveita.</p>
+        </div>
+      
+    </div>
+    </section>
+
+    <section id="galeria" class="section-padrao mx-auto section">
+       <p class="text-amber-300/60 chamada_texto font-chamada">Galeria</p>
+       <h3 class="subtitle_description">Momentos que ficam</h3>
+       <article class="flex flex-col md:flex-row justify-center gap-4">
+        <!-- FOTO PRINCIPAL -->
+         <div class="flex-1 container_img_churrasco">
+          <img src="/assets/pexels-furkanalakoc-31587900.jpg" alt="" class="img_galeria">
+         </div>
+
+         <!-- FOTOS SECUNDARIAS -->
+          <div class="flex-1 grid gap-4 md:grid-cols-2">
+            <div class="container_img_churrasco"><img src="/assets/pexels-catota-35225150.jpg" alt="" class="img_galeria"></div>
+
+            <div class="container_img_churrasco"><img src="/assets/pexels-wolfart-32383601.jpg" alt="" class="img_galeria"></div>
+
+            <div class="container_img_churrasco"><img src="/assets/pexels-mohamed9380-36815993.jpg" alt="" class="img_galeria"></div>
+
+            <div class="container_img_churrasco"><img src="/assets/pexels-mohamed9380-36593590.jpg" alt="" class="img_galeria"></div>
+          </div>
+
+       </article>
+    </section>
+
+    <section class="section-padrao section">
+       <p class="text-amber-300/60 chamada_texto font-chamada">Depoimentos</p>
+        <h3 class="subtitle_description">Experiências que falam por si.</h3>
+        <div class="grid  md:grid-cols-3 gap-4 justify-center">
+          <div class="card_service">
+            <p class="estrelas">⭐⭐⭐⭐⭐</p>
+            <p class="italic opacity-60  flex-1">Contratamos para o nosso casamento e foi um sucesso total. Os convidados ficaram elogiando a carne até o dia seguinte!</p>
+            <article class="flex items-center gap-4">
+                <div class="emoji">👰</div>
+                <div>
+                  <p class="font-bold font-title text-lg">Ana & Pedro</p>
+                  <p class="text-subtitle text-shadow-2xs text-shadow-black text-sm">Casamento</p>
+                </div>
+            </article>
+          </div>
+          <div class="card_service">
+            <p class="estrelas">⭐⭐⭐⭐⭐</p>
+            <p class="italic opacity-60 flex-1">Melhor churrasco da minha vida. A estrutura era impecável, equipe super atenciosa. Com certeza vou contratar novamente.</p>
+            <article class="flex items-center gap-4">
+                <div class="emoji">🥳</div>
+                <div>
+                  <p class="font-bold font-title text-lg">Carlos Almeida</p>
+                  <p class="text-subtitle text-shadow-2xs text-shadow-black text-sm">Aniversário</p>
+                </div>
+            </article>
+          </div>
+          <div class="card_service">
+            <p class="estrelas">⭐⭐⭐⭐⭐</p>
+            <p class="italic opacity-60 flex-1">Fizemos a confraternização da empresa e todo mundo adorou. Profissional, pontual e a comida estava incrível.</p>
+            <article class="flex items-center gap-4">
+                <div class="emoji">💼</div>
+                <div>
+                  <p class="font-bold font-title text-lg">Renata Silveira</p>
+                  <p class="text-subtitle text-shadow-2xs text-shadow-black text-sm">Evento Corporativo</p>
+                </div>
+            </article>
+          </div>
+        </div>
+
+    </section>
+
+    
+        <div class="linhaDecorativa"><span class="text-xl opacity-50 text-amber-300">✦</span></div>
+
+        <section class="section-padrao scroll-mt-40" id="contato">
+        <p class="text-amber-300/60 chamada_texto font-chamada">Contato</p>
+        <h3 class="subtitle_description">Bora fazer seu evento inesquecível?</h3>
+        <p class="text-lg opacity-50 text-shadow-black text-shadow-sm">Preencha abaixo e entraremos em contato em até 24h com um orçamento personalizado. Sem compromisso.</p>
+        <form class="grid gap-3 mt-4 max-w-2xl mx-auto  items-center w-full">
+          <div class="grid gap-3 md:grid-cols-2">
+            <div class="infoForm">
+              <label for="nome" class="text-amber-300/60 chamada_texto font-chamada">Nome</label>
+              <input type="text" id="nome" name="nome" class="inputForm" placeholder="João da Silva" autocomplete="off">
+            </div>
+            <div class="infoForm">
+              <label for="numero" class="text-amber-300/60 chamada_texto font-chamada">Whatsapp</label>
+              <input type="text" name="numero" id="numero" class="inputForm" placeholder="(11) 99999-9999" autocomplete="off">
+            </div>
+          </div>
+          <div class="infoForm">
+            <label for="email" class="text-amber-300/60 chamada_texto font-chamada">Email</label>
+            <input type="email" name="email" id="email" class="inputForm" placeholder="joao@email.com" autocomplete="off">
+          </div>
+          <div class="grid gap-3 md:grid-cols-2">
+            <div class="infoForm">
+              <label for="evento" class="text-amber-300/60 chamada_texto font-chamada">Tipo de Evento</label>
+              <select name="evento" id="evento" class="inputForm">
+                <option value=""hidden selected disabled class="opt">Selecione..</option>
+                <option value="aniversario" class="opt">Aniversário</option>
+                <option value="casamento" class="opt">Casamento</option>
+                <option value="happy" class="opt">Happy Hour</option>
+                <option value="confraternizacao" class="opt">Confra da firma</option>
+                <option value="formatura" class="opt">Formatura</option>
+              </select>
+            </div>
+            <div class="infoForm">
+              <label for="convidados" class="text-amber-300/60 chamada_texto font-chamada">Nº de convidados</label>
+              <select name="convidados" id="covidados" class="inputForm">
+                <option value="" hidden selected disabled>Selecione..</option>
+                <option value="20" class="opt">Até 20 pessoas</option>
+                <option value="meio" class="opt">De 20 a 50 pessoas</option>
+                <option value="intermediario" class="opt">De 50 a 80 pessoas</option>
+                <option value="maior" class="opt">Mais de 100 pessoas</option>
+              </select>
+            </div>
+          </div>
+          <div class="infoForm">
+            <label for="data" class="text-amber-300/60 chamada_texto font-chamada">Data prevista do evento</label>
+            <input type="date" name="data" id="data" class="inputForm">
+          </div>
+          <div class="infoForm">
+            <label for="detalhe" class="text-amber-300/60 chamada_texto font-chamada">Algum detalhe a mais?</label>
+            <textarea name="detalhe" id="detalhe" class="inputForm resize-none  h-40 w-full" placeholder="Conte um pouco sobre seu evento..." autocomplete="off"></textarea>
+          </div>
+          <button class="btnChurrasco mt-4">🔥 Quero meu orçamento</button>
+        </form>
+        </section>
+    </main>
+    <a href="#" class="btnWhats"><i class="fa-brands fa-whatsapp"></i></a>
+
+    <footer class="border-t-amber-300/40 border-t-2 flex justify-around flex-col md:flex-row  items-center gap-4 py-3 px-8 text-sm text-gray-300/50">
+      <div class="max-w-28"><img src="/assets/logo-mastergrill (1).png" alt="" class="w-full aspect-square object-cover"></div>
+      <ul class="flex gap-4 justify-center items-center">
+        <li><a href="servicos" class="duration-300 hover:text-texto">Serviços</a></li>
+        <li><a href="contato" class="duration-300 hover:text-texto">Contato</a></li>
+        <li><a href="#" class="duration-300 hover:text-texto">Whatsapp</a></li>
+        <li><a href="#" class="duration-300 hover:text-texto">Instagram</a></li>
+      </ul>
+      <p>&copy Master Grill Alemão. Todos os direitos reservados</p>
+    </footer>
+<script src="script.js"></script>
+</body>
+</html>

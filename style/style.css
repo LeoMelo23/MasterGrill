@@ -1,0 +1,287 @@
+@import "tailwindcss";
+
+@layer components{
+    .item-lista{
+        @apply  text-xl font-medium text-shadow-sm  p-2 rounded-md
+    }
+    .item-lista-mobile{
+        @apply  text-2xl font-medium text-shadow-sm  p-2 rounded-md
+    }
+    .btnMenu{
+        @apply md:hidden text-3xl cursor-pointer
+    }
+    .linkMenu{
+        @apply text-texto hover:text-destaque duration-300
+    }
+    .chamada_texto{
+        @apply uppercase tracking-widest text-sm 
+    }
+    .btnChurrasco{
+        @apply uppercase bg-ember font-bold py-4 px-10 rounded shadow-xs shadow-black/70 cursor-pointer duration-300 hover:scale-105 hover:translate-x-1 hover:-translate-y-1 hover:bg-destaque 
+    }
+    .overlay{
+        @apply fixed inset-0 bg-black/40 backdrop-blur-sm opacity-0 invisible transition-all duration-400
+    }
+    .linhaDecorativa{
+        @apply my-28 max-w-7xl mx-auto flex justify-center items-center gap-4 before:content-['']  before:h-[1px] before:bg-linear-to-r before:from-transparent before:via-amber-300/60 before:to-transparent before:flex-1 after:content-[''] after:h-[1px]  after:bg-linear-to-r after:from-transparent after:via-amber-300/60 after:to-transparent after:flex-1 after:rounded-full
+    }
+    .descricao_servicos{
+        @apply opacity-50 text-shadow-sm text-shadow-black
+    }
+    .title_services{
+        @apply font-title text-2xl font-bold
+    }
+    .subtitle_description{
+        @apply font-title text-texto text-4xl lg:text-6xl font-medium
+    }
+    .card_service{
+        @apply border-2 border-amber-200/20 duration-400 hover:border-amber-300/40 bg-black/20 p-8 flex flex-col gap-4 shadow-lg shadow-black/40   hover:scale-105 hover:-translate-y-3 hover:translate-x-2  cursor-pointer
+    }
+    .section-padrao{
+        @apply max-w-[1600px] mx-auto  mt-16 p-6 flex flex-col gap-4  justify-center lg:items-start
+    }
+    .img_galeria{
+        @apply  w-full object-cover aspect-square h-full duration-500 hover:scale-125 cursor-pointer
+    }
+    .container_img_churrasco{
+        @apply max-w-2xl border-amber-300/40 border-2 overflow-hidden
+    }
+    .estrelas{
+        @apply text-xs opacity-50
+    }
+    .emoji{
+        @apply text-2xl bg-black/50 rounded-full p-1 border-2 border-subtitle
+    }
+    .btnWhats{
+        @apply fixed bottom-3 w-10 h-10 flex justify-center items-center right-2 md:right-5 text-3xl p-6 bg-green-500 rounded-full  duration-400  hover:scale-125 hover:bg-green-600
+    }
+    .inputForm{
+        @apply border-amber-300/20 border-[1px] p-3 bg-amber-100/10 focus:border-ember/60 outline-0 text-sm
+    }
+    .infoForm{
+        @apply grid gap-2
+    }
+    .opt{
+        @apply bg-gold
+    }
+    .section{
+       @apply scroll-mt-40 md:scroll-mt-48
+    }
+
+}
+
+
+@theme {
+ --color-texto:#F5ECD7;
+ --color-destaque:#C93B00;
+ --color-ember:#E8431A;
+ --color-gold:#5F3718;
+ --color-subtitle:#6B5C44;
+ --font-subtitle: "Geist", sans-serif;
+ --font-texto:"Jost", sans-serif;
+ --font-chamada:"Smooch Sans", sans-serif;
+ --font-title:"Montenegrin Gothic One", serif;
+ --font-destaque: "Abril Fatface", serif;
+ 
+}
+ /* tamanho original preservado */
+    svg.grill-svg { width: 100%; max-width: 420px; overflow: visible; }
+ 
+    /* ── FUMAÇA normal ── */
+    .smoke-p { animation: smokeRise 4s ease-in-out infinite; opacity: 0; }
+    .smoke-p1 { animation-delay: 0s;   }
+    .smoke-p2 { animation-delay: 1.4s; }
+    .smoke-p3 { animation-delay: 2.8s; }
+    .smoke-p4 { animation-delay: 0.7s; }
+    .smoke-p5 { animation-delay: 2.1s; }
+    @keyframes smokeRise {
+      0%   { opacity: 0;    transform: translateY(0px)   scaleX(1);   }
+      20%  { opacity: 0.22; }
+      75%  { opacity: 0.10; transform: translateY(-65px) scaleX(1.7); }
+      100% { opacity: 0;    transform: translateY(-85px) scaleX(2.1); }
+    }
+ 
+    /* ── FUMAÇA no hover — mais rápida, mais opaca, sobe mais ── */
+    .grill-wrap:hover .smoke-p {
+      animation-name: smokeHover;
+      animation-duration: 2.2s;
+    }
+    @keyframes smokeHover {
+      0%   { opacity: 0;    transform: translateY(0px)    scaleX(1);   }
+      15%  { opacity: 0.55; }
+      70%  { opacity: 0.30; transform: translateY(-100px) scaleX(2.2); }
+      100% { opacity: 0;    transform: translateY(-130px) scaleX(2.8); }
+    }
+ 
+    /* ── CHAMAS ── */
+    .flame-p { transform-origin: bottom center; }
+    .fl1 { animation: flicker1 1.8s ease-in-out infinite alternate; }
+    .fl2 { animation: flicker2 2.1s ease-in-out infinite alternate; }
+    .fl3 { animation: flicker3 1.5s ease-in-out infinite alternate; }
+    .fl4 { animation: flicker1 2.3s ease-in-out infinite alternate; }
+    .fl5 { animation: flicker2 1.6s ease-in-out infinite alternate; }
+    .fl6 { animation: flicker3 2.0s ease-in-out infinite alternate; }
+    @keyframes flicker1 {
+      0%   { transform: scaleY(1)    scaleX(1);    opacity: 0.9; }
+      100% { transform: scaleY(0.88) scaleX(1.06); opacity: 1;   }
+    }
+    @keyframes flicker2 {
+      0%   { transform: scaleY(0.93) scaleX(0.97); opacity: 1;   }
+      100% { transform: scaleY(1.06) scaleX(0.94); opacity: 0.85;}
+    }
+    @keyframes flicker3 {
+      0%   { transform: scaleY(1.04) scaleX(1.03); opacity: 0.8; }
+      100% { transform: scaleY(0.92) scaleX(0.98); opacity: 1;   }
+    }
+ 
+    /* ── CHAMAS no hover — maiores e mais intensas ── */
+    .grill-wrap:hover .flame-p { transform-origin: bottom center; }
+    .grill-wrap:hover .fl1 { animation: flickerHot1 1.1s ease-in-out infinite alternate; }
+    .grill-wrap:hover .fl2 { animation: flickerHot2 1.3s ease-in-out infinite alternate; }
+    .grill-wrap:hover .fl3 { animation: flickerHot1 0.9s ease-in-out infinite alternate; }
+    .grill-wrap:hover .fl4 { animation: flickerHot2 1.4s ease-in-out infinite alternate; }
+    .grill-wrap:hover .fl5 { animation: flickerHot1 1.0s ease-in-out infinite alternate; }
+    .grill-wrap:hover .fl6 { animation: flickerHot2 1.2s ease-in-out infinite alternate; }
+    @keyframes flickerHot1 {
+      0%   { transform: scaleY(1.3)  scaleX(1.0);  opacity: 1;   }
+      100% { transform: scaleY(1.1)  scaleX(1.12); opacity: 0.95;}
+    }
+    @keyframes flickerHot2 {
+      0%   { transform: scaleY(1.15) scaleX(0.95); opacity: 0.95;}
+      100% { transform: scaleY(1.35) scaleX(1.08); opacity: 1;   }
+    }
+ 
+    /* ── GLOW ── */
+    .glow-p { animation: glowPulse 2s ease-in-out infinite alternate; }
+    @keyframes glowPulse {
+      0%   { opacity: 0.5; }
+      100% { opacity: 0.9; }
+    }
+    .grill-wrap:hover .glow-p { animation: glowHot 1s ease-in-out infinite alternate; }
+    @keyframes glowHot {
+      0%   { opacity: 0.85; }
+      100% { opacity: 1;    }
+    }
+ 
+    /* ── HALO leve pulsando ── */
+    .grill-halo {
+      position: absolute; top: 50%; left: 50%;
+      transform: translate(-50%, -58%);
+      width: 500px; height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(ellipse at center,
+        rgba(232,80,10,0.18)  0%,
+        rgba(200,50,0,0.08)  45%,
+        transparent           75%
+      );
+      pointer-events: none; z-index: 0;
+      animation: haloPulse 2.5s ease-in-out infinite alternate;
+    }
+    @media(min-width:768px) and (max-width:1024px) {
+      .grill-halo{
+        width: 340px; height: 340px;
+      }
+    }
+    .grill-wrap:hover .grill-halo {
+      animation: haloHot 1.5s ease-in-out infinite alternate;
+    }
+    @keyframes haloPulse {
+      0%   { opacity: 0.7; transform: translate(-50%,-58%) scale(0.97); }
+      100% { opacity: 1.0; transform: translate(-50%,-58%) scale(1.03); }
+    }
+    @keyframes haloHot {
+      0%   { opacity: 1;   transform: translate(-50%,-58%) scale(1.04);
+             background: radial-gradient(ellipse at center, rgba(255,120,20,0.35) 0%, rgba(220,60,0,0.15) 45%, transparent 75%); }
+      100% { opacity: 1;   transform: translate(-50%,-58%) scale(1.10);
+             background: radial-gradient(ellipse at center, rgba(255,140,20,0.42) 0%, rgba(230,70,0,0.18) 45%, transparent 75%); }
+    }
+ 
+    .meat-p { animation: sizzle 3s ease-in-out infinite alternate; transform-origin: center; }
+    @keyframes sizzle {
+      0%   { transform: scaleX(1); }
+      100% { transform: scaleX(1.012); }
+    }
+ 
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 70% 60%, rgba(232,67,26,0.15) 0%, transparent 65%),
+        radial-gradient(ellipse 50% 40% at 80% 80%, rgba(212,149,42,0.10) 0%, transparent 60%);
+      z-index: 0;
+    }
+ 
+    /* flame SVG decorative */
+    .flame-deco {
+      position: absolute;
+      right: 6%;
+      bottom: 0;
+      width: 380px;
+      opacity: 0.15;
+      z-index: 1;
+      animation: flicker 3s ease-in-out infinite alternate;
+    }
+ 
+    @keyframes flicker {
+      0%   { transform: scaleY(1)   scaleX(1);   opacity: 0.12; }
+      40%  { transform: scaleY(1.04) scaleX(0.98); opacity: 0.17; }
+      100% { transform: scaleY(0.97) scaleX(1.02); opacity: 0.13; }
+    }
+    @theme{
+    --animate-fadeUp: fadeUp 1.4s ease backwards;
+    --animate-brilhar: brilhar 1.1s ease backwards
+
+}
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateX(10px)
+    }
+    to{
+        opacity:1;
+        transform:translateX(0)
+    }
+}
+
+@keyframes brilhar{
+    0%{
+        filter: brightness(0.8);
+        transform:scale(0.9);
+    }
+    50%{
+        filter: brightness(3);
+        transform:scale(1.25)
+    }
+    100%{
+        filter: brightness(1);
+        transform:scale(1)
+    }
+
+}
+@layer utilities{
+    .delay_1000{
+        animation-delay:1s
+    }
+    .delay_700{
+        animation-delay:0.7s
+    }
+    .delay_500{
+        animation-delay:0.5s
+    }
+    .delay_300{
+        animation-delay:0.3s
+    }    
+    .delay_200{
+        animation-delay:0.2s
+    }
+    .delay_100{
+        animation-delay:0.1s
+    }
+     .delay_1200{
+        animation-delay:1.2s
+    }
+    .delay_900{
+        animation-delay:0.9s
+    }
+}
