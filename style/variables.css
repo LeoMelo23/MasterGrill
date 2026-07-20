@@ -1,0 +1,13 @@
+@theme {
+ --color-texto:#F5ECD7;
+ --color-destaque:#C93B00;
+ --color-ember:#E8431A;
+ --color-gold:#5F3718;
+ --color-subtitle:#6B5C44;
+ --font-subtitle: "Geist", sans-serif;
+ --font-texto:"Jost", sans-serif;
+ --font-chamada:"Smooch Sans", sans-serif;
+ --font-title:"Montenegrin Gothic One", serif;
+ --font-destaque: "Abril Fatface", serif;
+ 
+}

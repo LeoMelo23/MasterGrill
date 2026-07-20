@@ -35,3 +35,64 @@ function updateHeaderHeight(){
 
 updateHeaderHeight();
 window.addEventListener("resize", updateHeaderHeight);
+
+// ENVIO WHATSAPP//
+
+const form = document.getElementById("form");
+
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const nome = document.getElementById("nome").value.trim();
+    const telefone = document.getElementById("telefone").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const evento = document.getElementById("evento").value;
+    const convidados = document.getElementById("convidados").value;
+    const data = document.getElementById("data").value;
+    const observacoes = document.getElementById("observacoes").value.trim();
+
+    // Validação
+    if (!nome || !telefone || !evento || !convidados || !data) {
+        Swal.fire({
+            icon: "warning",
+            title: "Campos obrigatórios",
+            text: "Preencha todos os campos antes de continuar."
+        });
+
+        return;
+    }
+
+    const mensagem = `Olá! Gostaria de solicitar um orçamento.
+
+👤 Nome: ${nome}
+
+📱 WhatsApp: ${telefone}
+
+📧 E-mail: ${email}
+
+🎉 Evento: ${evento}
+
+👥 Convidados: ${convidados}
+
+📅 Data: ${data}
+
+📝 Observações:
+${observacoes}`;
+
+    const numero = "5514998401664";
+
+    const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
+
+    Swal.fire({
+        icon: "success",
+        title: "Redirecionando...",
+        text: "Você será direcionado para o WhatsApp.",
+        timer: 1200,
+        showConfirmButton: false
+    });
+
+    setTimeout(() => {
+        window.open(url, "_blank");
+        form.reset();
+    }, 1200);
+});

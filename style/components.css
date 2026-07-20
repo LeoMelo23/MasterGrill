@@ -1,0 +1,69 @@
+@layer components{
+    .item-lista{
+        @apply  text-xl font-medium text-shadow-sm  p-2 rounded-md
+    }
+    .item-lista-mobile{
+        @apply  text-2xl font-medium text-shadow-sm  p-2 rounded-md
+    }
+    .btnMenu{
+        @apply md:hidden text-3xl cursor-pointer
+    }
+    .linkMenu{
+        @apply text-texto hover:text-destaque duration-300
+    }
+    .chamada_texto{
+        @apply uppercase tracking-widest text-sm 
+    }
+    .btnChurrasco{
+        @apply uppercase bg-ember font-bold py-4 px-10 rounded shadow-xs shadow-black/70 cursor-pointer duration-300 hover:scale-105 hover:translate-x-1 hover:-translate-y-1 hover:bg-destaque 
+    }
+    .overlay{
+        @apply fixed inset-0 bg-black/40 backdrop-blur-sm opacity-0 invisible transition-all duration-400
+    }
+    .linhaDecorativa{
+        @apply my-28 max-w-7xl mx-auto flex justify-center items-center gap-4 before:content-['']  before:h-[1px] before:bg-linear-to-r before:from-transparent before:via-amber-300/60 before:to-transparent before:flex-1 after:content-[''] after:h-[1px]  after:bg-linear-to-r after:from-transparent after:via-amber-300/60 after:to-transparent after:flex-1 after:rounded-full
+    }
+    .descricao_servicos{
+        @apply opacity-50 text-shadow-sm text-shadow-black
+    }
+    .title_services{
+        @apply font-title text-2xl font-bold
+    }
+    .subtitle_description{
+        @apply font-title text-texto text-4xl lg:text-6xl font-medium
+    }
+    .card_service{
+        @apply border-2 border-amber-200/20 duration-400 hover:border-amber-300/40 bg-black/20 p-8 flex flex-col gap-4 shadow-lg shadow-black/40   hover:scale-105 hover:-translate-y-3 hover:translate-x-2  cursor-pointer
+    }
+    .section-padrao{
+        @apply max-w-[1600px] mx-auto  mt-16 p-6 flex flex-col gap-4  justify-center lg:items-start
+    }
+    .img_galeria{
+        @apply  w-full object-cover aspect-square h-full duration-500 hover:scale-125 cursor-pointer
+    }
+    .container_img_churrasco{
+        @apply max-w-2xl border-amber-300/40 border-2 overflow-hidden
+    }
+    .estrelas{
+        @apply text-xs opacity-50
+    }
+    .emoji{
+        @apply text-2xl bg-black/50 rounded-full p-1 border-2 border-subtitle
+    }
+    .btnWhats{
+        @apply fixed bottom-3 w-10 h-10 flex justify-center items-center right-2 md:right-5 text-3xl p-6 bg-green-500 rounded-full  duration-400  hover:scale-125 hover:bg-green-600
+    }
+    .inputForm{
+        @apply border-amber-300/20 border-[1px] p-3 bg-amber-100/10 focus:border-ember/60 outline-0 text-sm
+    }
+    .infoForm{
+        @apply grid gap-2
+    }
+    .opt{
+        @apply bg-gold
+    }
+    .section{
+       @apply scroll-mt-40 md:scroll-mt-48
+    }
+
+}
