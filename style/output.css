@@ -547,6 +547,9 @@
   .opacity-60 {
     opacity: 60%;
   }
+  .opacity-80 {
+    opacity: 80%;
+  }
   .shadow-sm {
     --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 1px 2px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
@@ -701,6 +704,11 @@
       display: block;
     }
   }
+  .lg\:aspect-auto {
+    @media (width >= 64rem) {
+      aspect-ratio: auto;
+    }
+  }
   .lg\:w-\[390px\] {
     @media (width >= 64rem) {
       width: 390px;
@@ -714,6 +722,11 @@
   .lg\:flex-row {
     @media (width >= 64rem) {
       flex-direction: row;
+    }
+  }
+  .xl\:aspect-square {
+    @media (width >= 80rem) {
+      aspect-ratio: 1 / 1;
     }
   }
   .xl\:w-\[500px\] {
