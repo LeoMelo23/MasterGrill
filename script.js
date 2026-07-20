@@ -61,10 +61,10 @@ form.addEventListener("submit", (e) => {
 
         return;
     }
-
+    const dataFormatada = new Date(data).toLocaleDateString("pt-BR");
     const mensagem = `Olá! Gostaria de solicitar um orçamento.
 
-👤 Nome: ${nome}
+🔥 Nome: ${nome}
 
 📱 WhatsApp: ${telefone}
 
@@ -74,7 +74,7 @@ form.addEventListener("submit", (e) => {
 
 👥 Convidados: ${convidados}
 
-📅 Data: ${data}
+📅 Data: ${dataFormatada}
 
 📝 Observações:
 ${observacoes}`;
@@ -87,7 +87,7 @@ ${observacoes}`;
         icon: "success",
         title: "Redirecionando...",
         text: "Você será direcionado para o WhatsApp.",
-        timer: 1200,
+        timer: 800,
         showConfirmButton: false
     });
 
