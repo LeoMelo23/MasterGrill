@@ -601,25 +601,25 @@
         <p class="text-amber-300/60 chamada_texto font-chamada">Contato</p>
         <h3 class="subtitle_description">Transformamos seu evento em uma experiência inesquecível</h3>
         <p class="text-lg opacity-50 text-shadow-black text-shadow-sm">Preencha abaixo e entraremos em contato em até 24h com um orçamento personalizado. Sem compromisso.</p>
-        <form class="grid gap-3 mt-4 max-w-2xl mx-auto items-center w-full" id="form">
+        <form class="grid gap-3 mt-4 max-w-2xl mx-auto items-center w-full" autocomplete="off" id="form">
           <div class="grid gap-3 md:grid-cols-2">
             <div class="infoForm">
               <label for="nome" class="text-amber-300/60 chamada_texto font-chamada">Nome</label>
-              <input type="text" id="nome" name="nome" class="inputForm" placeholder="João da Silva" autocomplete="off">
+              <input type="text" id="nome" name="nome" class="inputForm" placeholder="João da Silva" required>
             </div>
             <div class="infoForm">
               <label for="telefone" class="text-amber-300/60 chamada_texto font-chamada">Whatsapp</label>
-              <input type="tel" name="telefone" id="telefone" class="inputForm" placeholder="(11) 99999-9999" autocomplete="off" maxlength="15" inputmode="numeric">
+              <input type="tel" name="telefone" id="telefone" class="inputForm" placeholder="(11) 99999-9999"  maxlength="15" inputmode="numeric" required>
             </div>
           </div>
           <div class="infoForm">
             <label for="email" class="text-amber-300/60 chamada_texto font-chamada">Email</label>
-            <input type="email" name="email" id="email" class="inputForm" placeholder="joao@email.com" autocomplete="off">
+            <input type="email" name="email" id="email" class="inputForm" placeholder="joao@email.com" required>
           </div>
           <div class="grid gap-3 md:grid-cols-2">
             <div class="infoForm">
               <label for="evento" class="text-amber-300/60 chamada_texto font-chamada">Tipo de Evento</label>
-              <select name="evento" id="evento" class="inputForm">
+              <select name="evento" id="evento" class="inputForm" required>
                 <option value=""hidden selected disabled class="opt">Selecione..</option>
                 <option value="Aniversário" class="opt">Aniversário</option>
                 <option value="Casamento" class="opt">Casamento</option>
@@ -630,7 +630,7 @@
             </div>
             <div class="infoForm">
               <label for="convidados" class="text-amber-300/60 chamada_texto font-chamada">Nº de convidados</label>
-              <select name="convidados" id="convidados" class="inputForm">
+              <select name="convidados" id="convidados" class="inputForm" required>
                 <option value="" hidden selected disabled>Selecione..</option>
                 <option value="Até 20 pessoas" class="opt">Até 20 pessoas</option>
                 <option value="De 20 a 50 pessoas" class="opt">De 20 a 50 pessoas</option>
@@ -641,7 +641,7 @@
           </div>
           <div class="infoForm">
             <label for="data" class="text-amber-300/60 chamada_texto font-chamada">Data prevista do evento</label>
-            <input type="date" name="data" id="data" class="inputForm">
+            <input type="date" name="data" id="data" class="inputForm" required>
           </div>
           <div class="infoForm">
             <label for="observacoes" class="text-amber-300/60 chamada_texto font-chamada">Algum detalhe a mais?</label>

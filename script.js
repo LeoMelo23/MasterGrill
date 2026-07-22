@@ -52,7 +52,7 @@ form.addEventListener("submit", (e) => {
     const observacoes = document.getElementById("observacoes").value.trim();
 
     // Validação
-    if (!nome || !telefone || !evento || !convidados || !data) {
+    if (!nome || !telefone || !email || !evento || !convidados || !data) {
         Swal.fire({
             icon: "warning",
             title: "Campos obrigatórios",
@@ -61,7 +61,9 @@ form.addEventListener("submit", (e) => {
 
         return;
     }
+
     const dataFormatada = new Date(data).toLocaleDateString("pt-BR");
+
     const mensagem = `Olá! Gostaria de solicitar um orçamento.
 
 👨 Nome: ${nome}
@@ -83,38 +85,6 @@ ${observacoes}`;
 
     const url = `https://api.whatsapp.com/send?phone=${numero}&text=${encodeURIComponent(mensagem)}`;
 
-    Swal.fire({
-        icon: "success",
-        title: "Redirecionando...",
-        text: "Você será direcionado para o WhatsApp.",
-        timer: 800,
-        showConfirmButton: false
-    });
-
-    setTimeout(() => {
-        window.open(url, "_blank");
-        form.reset();
-    }, 1200);
-});
-const telefone = document.getElementById("telefone");
-
-telefone.addEventListener("input", (e) => {
-    let valor = e.target.value.replace(/\D/g, "");
-
-    // Limita a 11 dígitos
-    valor = valor.substring(0, 11);
-
-    if (valor.length > 10) {
-        valor = valor.replace(
-            /^(\d{2})(\d{5})(\d{0,4})$/,
-            "($1) $2-$3"
-        );
-    } else {
-        valor = valor.replace(
-            /^(\d{2})(\d{4})(\d{0,4})$/,
-            "($1) $2-$3"
-        );
-    }
-
-    e.target.value = valor;
+    // Redireciona diretamente para o WhatsApp
+    window.location.href = url;
 });
