@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style/output.css">
-    <link rel="shortcut icon" href="/assets/logo-mastergrill (1).png" type="image/x-icon">
+    <link rel="shortcut icon" href="/assets/logo-mastergrill (1).webp" type="image/x-icon">
     <script src="https://kit.fontawesome.com/334b29d687.js" crossorigin="anonymous"></script>
     <title>Master Grill</title>
 </head>
@@ -12,25 +12,22 @@
 
     <header class="py-4 px-8 flex justify-between items-center w-full sticky top-0 z-100 backdrop-blur-lg max-w-[1600px] mx-auto">
 
-        <div><img src="/assets/logo-mastergrill (1).png" alt="logo" class="w-full max-w-28 md:max-w-40 hover:scale-110 duration-300 cursor-pointer"></div>
+        <div><img src="/assets/logo-mastergrill (1).webp" alt="logo" class="w-full max-w-28 md:max-w-40 hover:scale-110 duration-300 cursor-pointer"></div>
         <button class="btnMenu linkMenu" id="btnMenu"><i class="fa-solid fa-bars"></i></button>
         <nav class="hidden md:flex">
+
+          <!-- CHAPEIII MUDAR -->
             <ul class="flex gap-4">
-                <a href="#home" class="item-lista linkMenu">
-                    <li>Home</li>
-                </a>
-                <a href="#sobre" class="item-lista linkMenu">
-                    <li>Quem somos</li>
-                </a>
-                <a href="#servicos" class="item-lista linkMenu">
-                    <li>Serviços</li>
-                </a>
-                 <a href="#galeria" class="item-lista linkMenu">
-                    <li>Galeria</li>
-                </a>
-                <a href="#contato" class="item-lista linkMenu">
-                    <li>Contato</li>
-                </a>
+
+                <li><a href="#home" class="item-lista linkMenu">Home</a></li>
+
+                <li><a href="#sobre" class="item-lista linkMenu">Quem Somos</a></li>
+
+                <li><a href="#servicos" class="item-lista linkMenu">Serviços</a></li>
+
+                 <li><a href="#galeria" class="item-lista linkMenu">Galeria</a></li>
+
+                <li><a href="#contato" class="item-lista linkMenu">Contato</a></li>
             </ul>
         </nav>
     </header>
@@ -41,21 +38,15 @@
     <nav class="fixed duration-400 w-screen h-screen top-0 right-0 left-0 bottom-0 translate-x-full z-200 bg-black/90 backdrop-blur-md" id="menu-mobile">
         <button class="absolute top-5 right-5 text-3xl cursor-pointer linkMenu item-lista" id="btn-close">X</button>
           <ul class="min-h-screen flex justify-center items-center flex-col gap-6">
-                <a href="#" class="item-lista-mobile linkMenu">
-                    <li>Home</li>
-                </a>
-                <a href="#sobre" class="item-lista-mobile linkMenu">
-                    <li>Quem somos</li>
-                </a>
-                <a href="#servicos" class="item-lista-mobile linkMenu">
-                    <li>Serviços</li>
-                </a>
-                <a href="#galeria" class="item-lista-mobile linkMenu">
-                    <li>Galeria</li>
-                </a>
-                <a href="#contato" class="item-lista-mobile linkMenu">
-                    <li>Contato</li>
-                </a>
+                <li><a href="#home" class="item-lista-mobile linkMenu">Home</a></li>
+
+                <li><a href="#sobre" class="item-lista-mobile linkMenu">Quem Somos</a></li>
+
+                <li><a href="#servicos" class="item-lista-mobile linkMenu">Serviços</a></li>
+
+                 <li><a href="#galeria" class="item-lista-mobile linkMenu">Galeria</a></li>
+
+                <li><a href="#contato" class="item-lista-mobile linkMenu">Contato</a></li>
             </ul>
     </nav>
 
@@ -451,7 +442,7 @@
     <section id="sobre" class="section-padrao lg:flex-row  md:gap-12 mx-auto section">
       
       <article class="flex-1">
-        <div class="relative border-2 max-w-3xl mx-auto border-amber-300/40"><img src="/assets/fotoSobreNos.png" class="w-full object-cover aspect-square lg:aspect-auto xl:aspect-square opacity-80" alt="imagem">
+        <div class="relative border-2 max-w-3xl mx-auto border-amber-300/40"><img src="/assets/fotoSobreNos.webp" class="w-full object-cover aspect-square lg:aspect-auto xl:aspect-square opacity-80" alt="imagem">
         <div class="absolute -top-6 right-0 md:-right-8 bg-ember rounded-full p-5  text-center shadow-sm shadow-black font-title"><p class="font-bold text-amber-300 text-2xl tracking-wide text-shadow-xs text-shadow-black">+100</p> <p class="text-md font-medium tracking-wide text-shadow-xs text-shadow-black">eventos</br> realizados</p></div> 
             </div>
       </article>
@@ -490,7 +481,7 @@
         <div class="card_service">
           <p class="text-4xl">🍻</p>
           <h4 class="title_services">Festivais</h4>
-          <p class="descricao_servicos">Estrutura completa para festivais, oferecendo pratos, lanches e carnes especiais com atendimento rápido</p>
+          <p class="descricao_servicos">Estrutura completa para festivais, oferecendo pratos, lanches e carnes especiais com atendimento rápido.</p>
         </div>
         <div class="card_service">
           <p class="text-4xl">💍</p>
@@ -502,8 +493,8 @@
           <h4 class="title_services">Estrutura completa</h4>
           <p class="descricao_servicos">Levamos tudo: parrilla, equipamentos, equipe, louça e descartável. Você só aproveita.</p>
         </div>
-      
     </div>
+     <p class="text-lg opacity-50 italic text-shadow-md leading-8 tracking-wide text-shadow-black mt-4">*Cada evento recebe um planejamento exclusivo. Não trabalhamos com um modelo padrão. Adaptamos toda a operação de acordo com o local, horário, quantidade de convidados e estilo da comemoração.</p>
     </section>
 
     <section id="galeria" class="section-padrao mx-auto section">
@@ -512,18 +503,18 @@
        <article class="flex flex-col md:flex-row justify-center gap-4">
         <!-- FOTO PRINCIPAL -->
          <div class="flex-1 container_img_churrasco">
-          <img src="/assets/fotoPrincipalGaleria2.JPG" alt="" class="img_galeria">
+          <img src="/assets/fotoPrincipalGaleria2.webp" alt="" class="img_galeria">
          </div>
 
          <!-- FOTOS SECUNDARIAS -->
           <div class="flex-1 grid gap-4 md:grid-cols-2">
-            <div class="container_img_churrasco"><img src="/assets/foto01galeria.jpg" alt="" class="img_galeria"></div>
+            <div class="container_img_churrasco"><img src="/assets/foto01galeria.webp" alt="" class="img_galeria"></div>
 
-            <div class="container_img_churrasco"><img src="/assets/foto02galeria.jpg" alt="" class="img_galeria"></div>
+            <div class="container_img_churrasco"><img src="/assets/foto02galeria.webp" alt="" class="img_galeria"></div>
 
-            <div class="container_img_churrasco"><img src="/assets/foto03galeria.JPG" alt="" class="img_galeria"></div>
+            <div class="container_img_churrasco"><img src="/assets/foto03galeria.webp" alt="" class="img_galeria"></div>
 
-            <div class="container_img_churrasco"><img src="/assets/foto04galeria.JPG" alt="" class="img_galeria"></div>
+            <div class="container_img_churrasco"><img src="/assets/foto04galeria.webp" alt="" class="img_galeria"></div>
           </div>
 
        </article>
@@ -663,7 +654,7 @@
     <a href="https://wa.me/14998257692?text=Olá!%20gostaria%20de%20solicitar%20um%20orçamento%20de%20churrasco%20para%20o%20meu%20evento.%20Poderia%20me%20passar%20mais%20informações?" target="_blank" class="btnWhats"><i class="fa-brands fa-whatsapp"></i></a>
 
     <footer class="border-t-amber-300/40 border-t-2 flex justify-around flex-col md:flex-row  items-center gap-4 py-3 px-8 text-sm text-gray-300/50">
-      <div class="max-w-28"><img src="/assets/logo-mastergrill (1).png" alt="" class="w-full aspect-square object-cover"></div>
+      <div class="max-w-28"><img src="/assets/logo-mastergrill (1).webp" alt="" class="w-full aspect-square object-cover"></div>
       <ul class="flex gap-4 justify-center items-center">
         <li><a href="#servicos" class="duration-300 hover:text-texto">Serviços</a></li>
         <li><a href="#contato" class="duration-300 hover:text-texto">Contato</a></li>
